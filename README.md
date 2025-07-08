@@ -1,3 +1,4 @@
 # JS-Assignment-2025
 
-Create a folder of your name and do all the work in that. Once your assignment is finished raise a PR for it to be merged
+The following repository contains a memory card flip game, an e-commerce platform and a chatbot all made using html, css and javascript . 
+
