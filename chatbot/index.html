@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>OpenRouter Chat App</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <aside class="sidebar">
+            <div class="heading"> LLM Models</div>
+            <select name="model" id="modelSelector" class="modelSelector">
+                <option value="mistralai/mistral-7b-instruct:free">Mistral 7B</option>
+                <option value="meta-llama/Meta-Llama-3-8B-Instruct">Meta-LLaMA 3 </option>
+                <option value="google/gemma-2b">Google Gemma 2</option>
+                <option value="CohereLabs/c4ai-command-r-plus">Command R+</option>
+                <option value="TheBloke/MythoMist-7B-GGUF">MythoMist 7B</option>
+                <option value="openchat/openchat-3.5-0106">OpenChat 3.5</option>
+            </select>
+        </aside>
+
+        <main class="chat-container">
+            <div class="chat-window" id="chat-window">
+                <form id="chat-form" class="chat-form">
+                    <input type="text" id="userInput" placeholder="Type a message ..." required autocomplete="off">
+                    <div class="chat-buttons">
+                        <button type="submit" id="submit-button"> Send </button>
+                        <button id="stop-button">Stop</button>
+                    </div>
+                </form>
+            </div>
+        </main>
+    </div>
+    
+    <script src="script.js"></script>
+</body>
+</html>
