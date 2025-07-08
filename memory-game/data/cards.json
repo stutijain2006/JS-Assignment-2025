@@ -1,0 +1,34 @@
+[
+    {
+        "name": "Card 1",
+        "image": "../assets/card1.png"
+    },
+    {
+        "name": "Card 2",
+        "image": "../assets/card2.png"
+    },
+    {
+        "name": "Card 3",
+        "image": "../assets/card3.png"
+    },
+    {
+        "name": "Card 4",
+        "image": "../assets/card4.png"
+    },
+    {
+        "name": "Card 5",
+        "image": "../assets/card5.png"
+    },
+    {
+        "name": "Card 6",
+        "image": "../assets/card6.png"
+    },
+    {
+        "name": "Card 7",
+        "image": "../assets/card7.png"
+    },
+    {
+        "name": "Card 8",
+        "image": "../assets/card8.png"
+    }
+]
