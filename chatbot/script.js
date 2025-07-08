@@ -1,4 +1,4 @@
-const API_KEY = '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';
+const API_KEY = 'your_openrouter_api_key';
 const chatWindow = document.getElementById('chat-window');
 const chatForm = document.getElementById('chat-form');
 const userInput = document.getElementById('userInput');
