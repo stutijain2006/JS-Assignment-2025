@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Guess-o-Drawing</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <div id="landing-page" class="page centered-page">
+        <h2>Guess-o-Drawing</h2>
+        <div class="buttons">
+            <button class="land-button" onclick="chooseMode('category')">Pick Word by Category</button>
+            <button class="land-button" onclick="chooseMode('custom')">Enter Custom Word</button>
+        </div>
+    </div>
+
+    <div id="category-page" class="hidden-page centered-page">
+        <h2>Select a Category</h2>
+        <div class="buttons">
+            <button class="cat-button" onclick="selectCategory('animals')">Animals</button>
+            <button class="cat-button" onclick="selectCategory('objects')">Objects</button>
+            <button class="cat-button" onclick="selectCategory('places')">Places</button>
+        </div>
+    </div>
+
+    <div id="custom-word-page" class="hidden-page centered-page">
+        <h2>Enter a Custom Word</h2>
+        <div class="buttons">
+            <input type="text" id="custom-word-input" placeholder="Enter the word">
+            <input type="text" id="custom-word-hint" placeholder="Enter the hint for the word">
+            <button onclick="selectCustomWord()">Start Game</button>
+        </div>
+    </div>
+
+    <div id="game-page" class="hidden-page">
+        <h2> Guess-o-Drawing</h2>
+        <h3 id="turn-info"></h3>
+        <p id="word-to-draw" class="hidden-page"></p>
+        <div class="main-section">
+            <div class="canva">
+                <canvas id="canvas"></canvas>
+                <div id="drawing-tools">
+                    <label> Color: </label>
+                    <input type="color" id="color-picker" />
+                    <label> Size: </label>
+                    <input type="range" id="brushSize" min="1" max="10" />
+                    <button id="clear-button" onclick="clearCanvas()">Clear</button>
+                </div>
+            </div>
+            <div class="answer-section">
+                <p id="timer"></p>
+                <div class="guesses">
+                    <input type="text" id="guess-input" placeholder="Enter your guess">
+                    <button id="guess-button" onclick="submitGuess()">Guess</button>
+                </div>
+                <p id="feedback"></p>
+                <button onclick="requestHints()" id="requestHint">Show Hint (-0.5)</button>
+                <p id="hint-box" class="hidden"></p>
+            </div>
+        </div>
+
+    </div>
+
+    <div id="leaderboard" class="hidden-page centered-page">
+        <h2> Game over </h2>
+        <div id="score-summary"></div>
+        <h3 id="winner"></h3>
+        <button id="restart-button" onclick="restartGame()">Restart Game</button>
+    </div>
+
+    <audio id="beep" src="beep.mp3" preload="auto"></audio>
+    <script src="script.js"></script>
+</body>
+
+</html>
